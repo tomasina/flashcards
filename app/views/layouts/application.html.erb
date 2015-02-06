@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Flashcards</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  	<title>Флэшкарточкер</title>
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
-  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
-  <script type="text/javascript" src="communication.js"></script>
-  <%= stylesheet_link_tag 'style.css' %>
-<title>Флэшкарточкер</title>
-  <link rel="stylesheet" href="application.css">
+  	<%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
+  	<%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+  	<script type="text/javascript" src="communication.js"></script>
+  	<%= stylesheet_link_tag 'style.css' %>
+	<title>Флэшкарточкер</title>
+  	<link rel="stylesheet" href="application.css">
 </head>
 <body>
-
-<section id="container">
-
-    <header class="clearfix">
-      <h1>Флэшкарточкер</h1>
-      <ul class="navigation-links">
-        <li><a href="#">Все карточки</a></li>
-        <li><a href="#">Добавить карточку</a></li>
-      </ul>
-    </header>
-    <section>
-      <p style="font-size: 22px;">
-        Первый в мире удобный менеджер флеш-карточек. Именно так.
-      </p>
-    </section>
-
-  </section>
+	<section id="container">
+	    <%=render "layouts/header" %>
+    	<div class="page-header center">
+    		<h1>Первый в мире удобный менеджер флеш-карточек. <small>Именно так.</small></h1>
+    	</div> 
+	</section>
 </body>
 </html>
-
-
