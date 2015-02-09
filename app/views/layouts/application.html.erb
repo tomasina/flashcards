@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<title>Флэшкарточкер</title>
-  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Флэшкарточкер</title>
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   	<%= csrf_meta_tags %>
-
-  	<%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
-  	<%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
-  	<script type="text/javascript" src="communication.js"></script>
-  	<%= stylesheet_link_tag 'style.css' %>
-	<title>Флэшкарточкер</title>
   	<link rel="stylesheet" href="application.css">
+	<title>Флэшкарточкер</title>
 </head>
 <body>
 	<section id="container">
-	    <%=render "layouts/header" %>
-    	<div class="page-header center">
-    		<h1>Первый в мире удобный менеджер флеш-карточек. <small>Именно так.</small></h1>
-    	</div> 
+	  <%= render "../views/shared/header" %>
+    <%= yield %>
 	</section>
 </body>
 </html>
