@@ -5,15 +5,15 @@
     <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  	<%= csrf_meta_tags %>
-  	<link rel="stylesheet" href="application.css">
-	<title>Флэшкарточкер</title>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="application.css">
+    <title>Флэшкарточкер</title>
 </head>
 <body>
-	<section id="container">
-	  <%= render "../views/shared/header" %>
+  <section id="container">
+    <%= render "../views/shared/header" %>
     <%= yield %>
-	</section>
+  </section>
 </body>
 </html>
