@@ -1,6 +1,7 @@
 class Card < ActiveRecord::Base
   def create
-  @card = Card.new(card_params)
+  @card = Card.new(params[:card])
+  #@card = Card.new(card_params)
 end
 
 private
