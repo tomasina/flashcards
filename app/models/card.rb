@@ -1,9 +1,6 @@
 class Card < ActiveRecord::Base
   def create
   @card = Card.new(card_params)
-
-  @card.save
-  redirect_to @card
 end
 
 private
