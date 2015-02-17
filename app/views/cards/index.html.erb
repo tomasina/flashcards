@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Все карточки</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>English</th>
+        <th>Русский</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.original_text %></td>
+        <td><%= card.translated_text %></td>
+        <td><%= card.review_date %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
