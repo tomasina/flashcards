@@ -1,7 +1,9 @@
 class Card < ActiveRecord::Base
-  def create
-    Card.create(card_params)
-  end
+  validates :original_text, :translated_text, presence: true
+
+  #def create
+   # Card.create(card_params)
+ # end
 
   private
     def card_params
