@@ -1,4 +1,4 @@
-<%= simple_form_for :card do |f| %>
+<%= simple_form_for @card do |f| %>
 
   <% if @card.errors.any? %>
     <div id="error_explanation">
@@ -6,20 +6,28 @@
         <%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:
       </h2>
       <ul>
-        <% @cad.errors.full_messages.each do |msg| %>
+        <% @card.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <p>
-    <%= f.input :original_text %><br>
-    <%= f.input :translated_text %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-
+  <form class="form-horizontal">
+    <div class="form-group">
+      <div class="col-xs-10">
+        <%= f.input :original_text, label: 'English', wrapper_html: { class: 'col-sm-2 control-label' } %>
+      </div>
+      <div class="col-xs-10">
+        <%= f.input :translated_text, label: 'Русский', wrapper_html: { class: 'col-sm-2 control-label' } %>
+      </div>
+      <div class="col-xs-10">
+        <%= f.label :review_date, "Дата пересмотра" %>
+        <%= f.date_select :review_date, default: 3.days.from_now, use_month_numbers: true, class: "form-control" %>
+      </div>
+      <div class="col-xs-10">
+        <%= f.button :submit, 'Сохранить', wrapper_html: { class: 'col-sm-2 control-label' } %>
+      </div>
+    </div>
+  </form>
 <% end %>
