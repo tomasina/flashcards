@@ -10,11 +10,9 @@ require 'open-uri'
 doc = Nokogiri::HTML(open("http://www.languagedaily.com/learn-german/vocabulary/common-german-words"))
 
 words_list = doc.css('table tr')
-puts words_list.length
-puts words_list.class
 
 words_list.css("tr").each do |item|
   original =  item.css('td')[1].text
   translated = item.css('td')[2].text
-  Card.create!( original_text: original, translated_text: translated, review_date: DateTime.now.to_date + 3 )
+  Card.create!( original_text: original, translated_text: translated )
 end
